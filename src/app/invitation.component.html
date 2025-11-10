@@ -1,3 +1,13 @@
+<audio id="weddingSong" autoplay loop>
+  <source
+    src="assets/audio/tiga-societeit-de-harmonie-ft-natasya-elvira.mp3"
+    type="audio/mpeg"
+  />
+</audio>
+<!-- Floating music toggle button -->
+<button (click)="toggleMusic()" id="musicToggleBtn" [class.playing]="isPlaying">
+  <img src="assets/img/playpause.png" width="24" height="24" />
+</button>
 <header>
   The Wedding of
   <p>FAZREENY & AKMAL</p>
@@ -73,6 +83,29 @@
         </select>
       </div>
 
+      <!-- No. of Pax Field -->
+      <div style="margin-bottom: 15px">
+        <label for="paxInput">No. of Pax (including yourself)</label><br />
+        <input
+          id="paxInput"
+          type="number"
+          name="Pax"
+          [(ngModel)]="rsvp.pax"
+          placeholder="e.g. 2"
+          min="1"
+          style="
+            width: 200px;
+            padding: 10px;
+            border-radius: 8px;
+            border: none;
+            background-color: var(--cream);
+            text-align: center;
+            font-family: 'Core Bandi Face W01 Regular';
+          "
+          required
+        />
+      </div>
+
       <!-- Message Field -->
       <div style="margin-bottom: 15px">
         <label for="msgInput">Message</label><br />
@@ -105,56 +138,58 @@
       💖 Thank you, {{ lastSubmittedName }}! Your RSVP has been received.
     </div>
   </div>
-  <div id="giftSection">
-    <h1>Your presence at our wedding is the greatest gift of all</h1>
-    <span class="giftText">
-      However, if you wish to honour us with a gift, a monetary gift would be
-      greatly appreciated.
+</div>
+<div id="giftSection">
+  <h1>Your presence at our wedding is the greatest gift of all</h1>
+  <span class="giftText">
+    However, if you wish to honour us with a gift, a monetary gift would be
+    greatly appreciated.
+  </span>
+  <br />
+  <div class="copySuccess" *ngIf="showCopySuccess">
+    Account number has been copied!
+  </div>
+  <button class="bankAcc" (click)="copyBankAccount()">
+    164799156762 (copy)
+  </button>
+  <p>Fazreeny Azeera Ahmad Kamar (Maybank)</p>
+</div>
+<div id="gallerySection">
+  <div class="left">
+    <img src="assets/img/gallery.png" />
+  </div>
+  <div class="right">
+    <span class="dear">Dear our beloved family & friends,</span><br /><br />
+    <span class="thanks">Thank You!</span><br />
+    <span class="wish">
+      for being part of our lives and supporting us through our journey.
+      <br /><br />
+      We are so blessed to have you celebrate and be a part of our wedding day.
+      <br /><br />
+      See you!
     </span>
-    <br />
-    <div class="copySuccess" *ngIf="showCopySuccess">
-      Account number has been copied!
-    </div>
-    <button class="bankAcc" (click)="copyBankAccount()">
-      164799156762 (copy)
-    </button>
-    <p>Fazreeny Azeera Ahmad Kamar (Maybank)</p>
-  </div>
-  <div id="gallerySection">
-    <div class="left">
-      <img src="assets/img/gallery.png" />
-    </div>
-    <div class="right">
-      <span class="dear">Dear our beloved family & friends,</span><br /><br />
-      <span class="thanks">Thank You!</span><br />
-      <span class="wish">
-        for being part of our lives and supporting us through our journey.
-        <br /><br />
-        We are so blessed to have you celebrate and be a part of our wedding
-        day. <br /><br />
-        See you!
-      </span>
-    </div>
-  </div>
-  <div id="contactSection">
-    <h1>Contact us for any questions or concerns</h1>
-    <div class="left">
-      <button>
-        <a href="https://wa.me/601119219225">
-          Fazreensya Ameera<br />
-          Kakak Pengantin <br />
-          +601119219225
-        </a>
-      </button>
-    </div>
-    <div class="right">
-      <button>
-        <a href="https://wa.me/60193303310">
-          Fazlinda Noor<br />
-          Kakak Pengantin <br />
-          +60193303310
-        </a>
-      </button>
-    </div>
   </div>
 </div>
+<div id="contactSection">
+  <h1>Contact us for any questions or concerns</h1>
+  <div class="left">
+    <button>
+      <a href="https://wa.me/601119219225">
+        Fazreensya Ameera<br />
+        Kakak Pengantin <br />
+        +601119219225
+      </a>
+    </button>
+  </div>
+  <div class="right">
+    <button>
+      <a href="https://wa.me/60193303310">
+        Fazlinda Noor<br />
+        Kakak Pengantin <br />
+        +60193303310
+      </a>
+    </button>
+  </div>
+</div>
+
+<div style="font-size: 10px; padding-bottom: 5px">website by citrusfwen 🍊</div>
