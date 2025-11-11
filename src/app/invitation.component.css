@@ -34,15 +34,15 @@ header img {
 #dateSection {
   text-align: center;
   display: inline-flex;
-  padding: 1.5em 10px 1.5em 0px;
+  padding: 1.5em 10px 1.5em 10px;
 
   img {
-    max-width: 190px;
+    max-width: 170px;
   }
 
   .right {
     vertical-align: middle;
-    padding-top: 80px;
+    padding-top: 50px;
   }
 
   h1 {
@@ -196,7 +196,7 @@ footer {
 /* GIFT SECTION */
 #giftSection {
   text-align: center;
-  padding: 1em 2em 5em;
+  padding: 2em 2em 5em;
 
   .giftText {
     max-width: 400px;
@@ -242,6 +242,8 @@ footer {
 
     img {
       max-width: 150px;
+      cursor: pointer;
+      transition: 0.3s;
     }
   }
 
@@ -360,6 +362,8 @@ footer {
   #dateSection {
     img {
       max-width: 250px;
+      cursor: pointer;
+      transition: 0.3s;
     }
 
     .right {
@@ -437,4 +441,23 @@ footer {
   100% {
     box-shadow: 0 0 0 0 rgba(255, 182, 193, 0);
   }
+}
+
+/* IMAGE OVERLAY */
+.overlay {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay img {
+  max-width: 90%;
+  max-height: 90%;
 }

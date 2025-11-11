@@ -8,6 +8,12 @@
 <button (click)="toggleMusic()" id="musicToggleBtn" [class.playing]="isPlaying">
   <img src="assets/img/playpause.png" width="24" height="24" />
 </button>
+
+<!-- Overlay -->
+<div class="overlay" *ngIf="isFullscreen" (click)="closeFullscreen()">
+  <img [src]="fullImageSrc" alt="Full image" />
+</div>
+
 <header>
   <!--The Wedding of
   <span style="font-family: 'Core Bandi Face W01 Regular';">FAZREENY & AKMAL</span>-->
@@ -15,7 +21,7 @@
 </header>
 <div id="dateSection">
   <div>
-    <img src="assets/img/tunang.png" />
+    <img src="assets/img/tunang.png" (click)="openFullscreen('assets/img/tunang.png')" />
   </div>
   <div class="right">
     <span style="font-size: 19px; font-family: 'Moontime'"
@@ -162,7 +168,7 @@
 </div>
 <div id="gallerySection">
   <div class="left">
-    <img src="assets/img/gallery.png" style="transform: rotate(-2deg);"/>
+    <img src="assets/img/gallery.png" style="transform: rotate(-2deg);" (click)="openFullscreen('assets/img/gallery.png')"/>
   </div>
   <div class="right">
     <span class="dear">Dear our beloved family & friends,</span><br />

@@ -131,4 +131,16 @@ export class InvitationComponent {
         this.isSubmitting = false;
       });
   }
+
+  isFullscreen = false;
+  fullImageSrc = '';
+
+  openFullscreen(src: string) {
+    this.fullImageSrc = src;
+    this.isFullscreen = true;
+  }
+
+  closeFullscreen() {
+    this.isFullscreen = false;
+  }
 }
