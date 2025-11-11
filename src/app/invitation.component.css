@@ -378,6 +378,7 @@ footer {
 
     .right {
       padding: 80px 30px 140px 0px;
+      width: 300px;
 
       .dear {
         font-size: 13px;
@@ -389,6 +390,10 @@ footer {
         font-size: 14px;
       }
     }
+  }
+
+  .rsvpForm {
+    background-size: cover;
   }
 }
 
