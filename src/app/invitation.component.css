@@ -28,29 +28,28 @@ header p {
 header img {
   width: -webkit-fill-available;
   max-width: 350px;
-  padding-right: 10px;
 }
 
 /* DATE SECTION */
 #dateSection {
   text-align: center;
   display: inline-flex;
-  padding: 3.5em 20px;
+  padding: 1.5em 10px 1.5em 0px;
 
   img {
-    max-width: 150px;
+    max-width: 190px;
   }
 
   .right {
     vertical-align: middle;
-    padding-top: 55px;
+    padding-top: 80px;
   }
 
   h1 {
     font-family: 'Libre Baskerville';
     font-size: 20px; 
     margin: 0;
-    padding: 10px 2px;
+    padding: 10px 0px;
   }
 }
 
@@ -159,7 +158,7 @@ footer {
     min-width: 250px;
     max-width: 350px;
     padding: 20px;
-    background-image: url("../assets/img/doodleForm.png");  /* your transparent PNG */
+    background-image: url("../assets/img/purplebg.png"); /* your transparent PNG */
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain; /* or 'cover' if you want it to fill the area */
@@ -258,9 +257,9 @@ footer {
     }
 
     .thanks {
-      font-size: 1.3em;
-      line-height: 3em;
-      font-family: "Jane Austen";
+      font-size: 2.2em;
+      line-height: 2em;
+      font-family: "Moontime";
     }
 
     .wish {
@@ -312,6 +311,7 @@ footer {
 #dressCodeSection {
   img {
     max-width: 250px;
+    margin-top: -10px;
   }
 
   p {
