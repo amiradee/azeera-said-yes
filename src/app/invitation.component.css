@@ -428,17 +428,17 @@ footer {
     }
 
     .right {
-      padding: 80px 0px 140px;
+      padding: 40px 0px 140px;
       width: 300px;
 
       .dear {
         font-size: 13px;
       }
       .thanks {
-        font-size: 2em;
+        font-size: 3em;
       }
       .wish {
-        font-size: 14px;
+        font-size: 1.2em;
       }
     }
   }
